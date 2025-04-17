@@ -1,4 +1,3 @@
-// lib/chakra/Providers.jsx
 'use client'
 
 import { ChakraProvider, defaultSystem } from '@chakra-ui/react'
