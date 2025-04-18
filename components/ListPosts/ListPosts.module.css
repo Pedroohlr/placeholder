@@ -1,0 +1,42 @@
+.containerPost{
+    border-radius: 10px;
+    background-color: #333;
+    padding: 10px;
+    width: 60%;
+}
+
+.containerPost .postHead{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid #737373;
+    border-radius: 2px;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.postHead .postName{
+    color: white;
+    font-size: 20px;
+}
+
+.postHead .postUser{
+    color: #737373;
+    font-size: 16px;
+}
+
+.containerPost .containerContent{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.containerContent .contentTitle {
+    font-size: 20px;
+    color: white;
+}
+
+.containerContent .contentBody{
+    font-size: 18px;
+    color: #737373;
+}
