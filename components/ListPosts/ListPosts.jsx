@@ -1,16 +1,21 @@
 "use client";
 
 import styles from "./ListPosts.module.css";
-import { useEffect, useState } from "react";
-import { getPosts } from "@/services/posts";
 import { Avatar } from "@chakra-ui/react";
+import { usePost } from "@/hooks/usePost";
+import Loading from "../loading/Loading";
 
 const ListPost = () => {
-  const [posts, setPosts] = useState([]);
+  const { posts, loading, error, reload} = usePost();
 
-  useEffect(() => {
-    getPosts().then((data) => setPosts(data));
-  }, []);
+  if(loading) return <Loading />
+
+  if(error) return (
+    <div>
+        <p>Erro ao carregar: {error.mensage}</p>
+        <button onClick={reload}>Tentar novamente</button>
+    </div>
+  )
 
   return (
     <div className={styles.containerList}>
