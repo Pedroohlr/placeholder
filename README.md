@@ -22,7 +22,7 @@ Olá! Eu me chamo **Pedro Hilário** e este repositório abriga um projeto de es
 
 1. Clone este repositório:  
    ```bash
-    git clone https://github.com/seu-usuario/placeholder.git
+    git clone https://github.com/Pedroohlr/placeholder.git
 
     npm install
 
