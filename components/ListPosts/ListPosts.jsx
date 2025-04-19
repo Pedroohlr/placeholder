@@ -6,6 +6,7 @@ import { usePost } from "@/hooks/usePost";
 import Loading from "../loading/Loading";
 
 const ListPost = () => {
+
   const { posts, loading, error, reload} = usePost();
 
   if(loading) return <Loading />
