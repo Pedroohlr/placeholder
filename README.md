@@ -14,8 +14,8 @@ Olá! Eu me chamo **Pedro Hilário** e este repositório abriga um projeto de es
 
 - React  
 - Next.js  
-- **Chakra UI**  
-- Axios (ou fetch)  
+- Chakra UI  
+- Axios  
 - CSS Modules  
 
 ## Como usar
