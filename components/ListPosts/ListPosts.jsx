@@ -39,6 +39,7 @@ const ListPost = () => {
               <h3 className={styles.contentTitle}>{post.title}</h3>
               <p className={styles.contentBody}>{post.body}</p>
             </div>
+            <button className={styles.comments}>Ver comentários</button>
           </div>
         ))
       )}
