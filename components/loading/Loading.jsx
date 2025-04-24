@@ -7,7 +7,7 @@ const Loading = () => {
     return (
     <VStack className={styles.loading}>
         <Spinner borderWidth="4px"/>
-        <Text>Carregando...</Text>
+        {/* <Text>Carregando...</Text> */}
     </VStack>
     ); 
 }
