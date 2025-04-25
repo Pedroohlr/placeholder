@@ -1,11 +1,25 @@
+import { isAxiosError } from "axios";
 import { api } from "@/api/api";
 
 export async function getUsers() {
-    const res = await api.get('/users');
-    return res.data;
+    try{
+        const res = await api.get('/users');
+        return res.data;
+    } catch (err) {
+        if(isAxiosError(err) && err.response?.status === 404){
+            return null
+        }
+
+        throw err
+    }
 }
 
 export async function getUser(id){
-    const res = await api.get(`/users/${id}`);
-    return res.data;
+    try{
+        const res = await api.get(`/users/${id}`);
+        return res.data;
+    } catch (err) {
+        if(isAxiosError(err) && err.response?.status === 404) return null
+        throw err
+    }
 }
