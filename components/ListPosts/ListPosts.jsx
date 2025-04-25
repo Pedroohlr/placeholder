@@ -1,14 +1,14 @@
 "use client";
 
 import styles from "./ListPosts.module.css";
-import { Avatar } from "@chakra-ui/react";
+import { Avatar, Button } from "@chakra-ui/react";
 import { usePost } from "@/hooks/usePost";
 import Loading from "../loading/Loading";
 
 const ListPost = () => {
   
-  const { posts, loading, error, reload} = usePost();
-
+  const { posts, loading, error, reload } = usePost();
+  
   if(loading) return <Loading />
 
   if(error) return (
@@ -16,8 +16,8 @@ const ListPost = () => {
         <p>Erro ao carregar: {error.mensage}</p>
         <button onClick={reload}>Tentar novamente</button>
     </div>
-  )
-
+  )  
+  
   return (
     <div className={styles.containerList}>
       {posts == "" ? (
@@ -39,7 +39,11 @@ const ListPost = () => {
               <h3 className={styles.contentTitle}>{post.title}</h3>
               <p className={styles.contentBody}>{post.body}</p>
             </div>
-            <button className={styles.comments}>Ver comentários</button>
+            <Button 
+              className={styles.comments}
+            >
+              Ver comentários
+            </Button>
           </div>
         ))
       )}
